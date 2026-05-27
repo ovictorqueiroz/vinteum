@@ -10,8 +10,8 @@ public class Jogo {
     }
 
     public Carta distribuiCartaParaJogador(Jogador jogador){
+        if(jogador.parou()){return null;}
         jogador.receberCarta(monte.virar());
-        return null;
     }
 
     public boolean acabou(){
