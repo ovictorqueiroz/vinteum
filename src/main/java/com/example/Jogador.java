@@ -9,8 +9,12 @@ public class Jogador {
     private boolean parou = false;
 
     public void receberCarta(Carta cartas){
-        List mao = this.getCartas();
+        this.getCartas();
         pontos += cartas.getNumero();
+    }
+
+    public void parar(){
+        parou = true;
     }
 
     public List<Carta> getCartas(){
