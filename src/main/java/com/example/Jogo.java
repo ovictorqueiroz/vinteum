@@ -11,7 +11,11 @@ public class Jogo {
 
     public Carta distribuiCartaParaJogador(Jogador jogador){
         if(jogador.parou()){return null;}
-        return jogador.receberCarta(monte.virar());
+        Carta cartaRecebida = monte.virar();
+        jogador.receberCarta(cartaRecebida);
+
+        return cartaRecebida;
+
     }
 
     public boolean acabou(){
@@ -19,9 +23,11 @@ public class Jogo {
     }
 
     public String resultado(){
+        String mensagem = "";
       if(jogador.getPontos() > Math.abs(jogador.getPontos() - 21)){
-          return String.format("%s é o vencedor", getJogador());
+          mensagem =  String.format("%s é o vencedor", getJogador());
       }
+      return mensagem;
     }
 
     public Jogador getJogador() {

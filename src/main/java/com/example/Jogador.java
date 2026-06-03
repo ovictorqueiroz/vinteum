@@ -8,9 +8,9 @@ public class Jogador {
     private List<Carta> cartas = new ArrayList<>();
     private boolean parou = false;
 
-    public void receberCarta(Carta cartas){
-        this.getCartas();
-        pontos += cartas.getNumero();
+    public void receberCarta(Carta carta){
+        cartas.add(carta);
+        pontos += carta.getNumero();
     }
 
     public void parar(){
