@@ -11,7 +11,7 @@ public class Monte {
 
     public Monte() {
         Naipe[] np = Naipe.values();
-        for (int linha = 0; linha <= 5; linha++) {
+        for (int linha = 0; linha < np.length; linha++) {
             Naipe naipe = np[linha];
             for (int coluna = 1; coluna < 14; coluna++) {
                 Carta carta = new Carta(coluna, naipe);

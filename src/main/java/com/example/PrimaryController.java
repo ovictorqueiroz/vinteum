@@ -18,7 +18,7 @@ public class PrimaryController {
     private Jogo jogo;
 
     public void turno(){
-
+        jogador
     }
 
     public void atualizar(){

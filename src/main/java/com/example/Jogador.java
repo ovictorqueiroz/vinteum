@@ -26,6 +26,6 @@ public class Jogador {
     };
 
     public boolean parou(){
-        return true;
+        return parou;
     }
 }
